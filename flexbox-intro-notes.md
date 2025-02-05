@@ -26,11 +26,40 @@
 **Important Note - flex-basis default value is auto, but when you specify flex: 1, it interprets it as flex: 1 1 0
 
 ### flex auto
-- with "flex-auto: 1" - it means:
-    - f@lex-grow: 1, flex-shrink: 1, flex-basis: auto"
+- with "flex: auto" - it means:
+    - flex-grow: 1, flex-shrink: 1, flex-basis: auto"
 
 ### Commonly used flexbox effects:
 1) initial: flex item doesnt grow but can shrink - expands to flex: 0 1 auto
 2) auto: flex items can grow and shrink - expands to flex: 1 1 auto
 3) none: flex items neither grow nor shrink - expands to 0 0 auto
-4) flex: ```<number [1,inf]> ```
+4) flex: ```<number [1,inf]> ``` - flex items main size will be proportional to number set. value expands to flex: number 1 0. The item will be at least as wide or tall as its minimum size
+**Note! flex basis 0 is not as the same as flex basis 0%**
+
+
+## Axes:
+- flexbos can work horizontally or vertically, some rules changes depending on which
+- default direction for flex container is horizontal or "row", but you can change to vertical with:
+``` 
+.flex container {
+    flex-direction: column;
+}
+```
+**Note - empty divs have 0 height by default so using flex-basis 0 means the flex items dont actually have to have any height to fill up their container**
+
+- when we change to column, flex-basis refers to height instead of width, for obvious reasons
+- when behaviour is flex-direction: row - the block level element defaults to full width of their parent
+- when behaviour is flex-direction: column - the block level element defaults to the height of their content
+
+## Alignment:
+- "justify-content" aligns items acorss the main axis
+- "align-items" aligns items along the cross axis
+- **Note, when you change flex-direction, the directions for alignment get changed as well, i.e. main axis is now column
+
+
+### Gap:
+- a gap property on a flex container specifies space between flex items, similar to adding a margin to items themselves
+
+## Additional Notes
+
+![img](/flexbox-rows-columns.png)
