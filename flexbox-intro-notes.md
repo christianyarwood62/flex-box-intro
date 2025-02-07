@@ -63,3 +63,24 @@
 ## Additional Notes
 
 ![img](/flexbox-rows-columns.png)
+
+
+- flex properties:
+    - flex-wrap:
+        - nowrap : default, all flex items will be on one line
+        - wrap : flex items will wrap onto multiple lines
+        - wrap reverse : flex items will wraponto multiple lines from bottom to top
+    - flex-flow:
+        - shorthand for flex-direction and flex-wrap properties
+        - arguments are something like "flex-flow: column wrap" e.g.
+    - justify-content:
+        - defines alignment along main axis
+    - align-self:
+        - allows default alignment to be overridden for individual flex items
+    - align-items:
+        - defines default behaviour for how flex items are laid out along the cross axis
+    - align-content:
+        - aligns flex containers lines within when there is extra space in the cross axis
+        - similar to how justify-content aligns individual items within main axis
+    - gap, row-gap, and column-gap:
+        - applies spacingonly between items not on the outer edges
